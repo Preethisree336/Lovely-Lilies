@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flowershop</title>
+    <!-- <link rel="stylesheet" href="https://cdn.js.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
+
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f8DDE3;
+            align-items: center;
+            padding: 20px 50px;
+
+
+        }
+
+        .logo {
+            color: rgb(226, 128, 174);
+            font-size: 25px;
+            font-weight: bold;
+
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgb(226, 128, 174);
+            font-size: 20px;
+        }
+
+        .hero {
+            position: relative;
+            height: 500px;
+        }
+
+        .hero img {
+            width: 90%;
+            height: 100%;
+            object-fit: cover;
+            margin-left: 70px;
+            margin-top: 20px;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            margin-right: 200px;
+            text-align: center;
+
+        }
+
+        .hero-text h3 {
+            font-size: 40px;
+            color: rgb(75, 100, 152);
+            margin-bottom: 40px;
+            font-style: italic;
+            margin-bottom: 20px;
+
+        }
+
+        .hero-text p {
+            font-size: 25px 0;
+            color: rgb(75, 110, 150);
+            font-style: italic;
+        }
+
+        .hero-text button {
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 10px;
+
+        }
+
+        .flowers {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .flowers h2 {
+            color: purple;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .flower-card h4 {
+            color: rgb(214, 52, 106);
+            font-style: italic;
+            font-size: 20px;
+        }
+
+        .flower-card p {
+            font-style: italic;
+            color: slateblue;
+            font-size: 20px;
+        }
+
+        .flower-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 30px;
+        }
+
+        .flower-card {
+            width: 250px;
+            padding: 20px;
+            /* background-color: antiquewhite; */
+            box-shadow: 0 4px 10px rgba(12, 11, 11, 0.1);
+            background-color: rgb(241, 237, 237);
+
+        }
+
+        .flower-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .flower-card button {
+            margin-top: 10px;
+            padding: 10px 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .about {
+            text-align: center;
+            padding: 50px;
+            background-color: rgb(241, 237, 237);
+
+
+        }
+
+        .about h2 {
+            font-size: 25px;
+            font-family: 'Courier New', Courier, monospace;
+            color: purple;
+
+        }
+
+        .about p {
+            margin-top: 5px;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            line-height: 1.5;
+            font-size: 15px;
+
+        }
+
+        .about button {
+            padding: 10px 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 15px;
+            background-color: lightgray;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .contact h2 {
+            font-size: 25px;
+            margin-bottom: 15px;
+            color: purple;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .contact h2 p {
+            font-style: italic;
+            margin-bottom: 25px;
+
+        }
+
+        .contact form {
+            margin: auto;
+            max-width: 500px;
+
+        }
+
+        .contact input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 15px;
+            border: 1px solid rgb(216, 216, 216);
+
+        }
+
+        .contact textarea {
+            height: 100px;
+
+        }
+
+        .contact button {
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+
+        .open time {
+            margin-top: 30px;
+        }
+
+        .open-time h3 {
+            font-size: 20px;
+            margin-top: 30px;
+            color: purple;
+            font-family: 'Courier New', Courier, monospace;
+
+
+        }
+
+        .open-time p {
+            margin: 5px 0;
+            font-style: italic;
+            color: slateblue;
+
+        }
+
+        footer {
+            text-align: center;
+            background-color: rgb(222, 217, 226);
+            padding: 20px;
+            color: rgb(226, 128, 174);
+            font-size: 20px
+        }
+    </style>
+    <nav class="navbar">
+        <div class="logo">Lovely Lilies</div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Review</a></li>
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+
+    </nav>
+    <section class="hero">
+        <img src="image/backgroung img.jpg" alt="flower">
+
+        <div class="hero-text">
+            <h3>Fresh Flower</h3>
+            <h4>Natural & Beautiful Flower</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dicta facere minima nisi facilis id
+                sapiente excepturi, omnis aspernatur, alias molestias! Esse eligendi veniam quae unde minima pariatur
+                dolor laborum.</p>
+
+            <button>Shop Now</button>
+        </div>
+    </section>
+
+    <section class="flowers">
+        <h2>Our Flowers</h2>
+        <p>Choose Your favourite Flowers!!</p>
+
+        <div class="flower-container">
+
+            <div class="flower-card">
+                <img src="image/paula-hayes-HSdModpz1lU-unsplash.jpg" alt="rose">
+                <h4>Red Rose</h4>
+                <p>₹299</p>
+                <button>Buy Now</button>
+
+            </div>
+
+            <div class="flower-card">
+                <img src="image/deleece-cook-TOi_oMU4-n0-unsplash.jpg" alt="lily">
+                <h4>White Lily</h4>
+                <p>₹349</p>
+                <button>Buy Now</button>
+
+            </div>
+            <div class="flower-card">
+                <img src="image/marta-filipczyk--7Mfzok9LNk-unsplash.jpg" alt="tulip">
+                <h4>Pink Tulip</h4>
+                <p>₹499</p>
+                <button>Buy Now</button>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>About Lovely Lilies!</h2>
+        <p>Lovely Lilies brings beautifull flowers..</p>
+        <p>Happiness is a bouquet of flowers🌸🪻🌷</p>
+        <button>Learn More</button>
+
+    </section>
+
+    <section class="contact">
+
+        <h2>Contact us</h2>
+        <p>Find us at!</p>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="open-time">
+
+            <h3>Opening Hours</h3>
+            <p>MON-SAT</p>
+            <p>8:30AM - 6PM</p>
+
+
+        </div>
+
+    </section>
+    <footer>
+        <p>@2026 Lovely Lilies </p>
+        <!-- <i class="fa-solid fa-seedling"></i> -->
+    </footer>
+
+
+
+
+</body>
+
+</html>
