@@ -1,0 +1,86 @@
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+
+</head>
+<body>
+     <div>
+    <h1>To-Do App</h1>
+    <input type="text" id="todo" placeholder="Enter Task">
+    <button onclick="addtask()">Add Task</button>
+    <ul id="tasklist"></ul>
+    </div>
+    
+
+<script>
+    let tasks =[]
+    function addtask(){
+
+
+    let todo = document.getElementById("todo");
+     let task = todo.value;
+tasks.push(task);
+let tasklist = document.getElementById("tasklist");
+let li = document.createElement("li");
+li.innerHTML = task;
+tasklist.appendChild(li);
+todo.value = "";
+    }
+
+</script> 
+
+<style>
+    body{
+        height: 100vh;
+        /* margin: 0; */
+        font-family:'Courier New', Courier, monospace;
+        background-color: rgb(190, 224, 252);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    div{
+        background-color: silver;
+       width: 360px;
+    padding: 30px;
+    border-radius: 10px;
+ 
+  
+    }
+    h1{
+        align-items: center;
+    margin-left: 50px;
+    }
+    input{
+        padding:10px;
+        border-radius: 5px;
+        border: 1px solid white;
+     
+     
+    }
+button{
+    background-color: rgb(83, 83, 219);
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: rgb(198, 208, 216);
+
+}
+ 
+li{
+
+
+    background-color: white;
+    padding: 10px;
+    margin-top: 7px;
+    border-radius: 5px;
+    color: rgb(95, 8, 95);
+   
+}
+
+
+</style>        
